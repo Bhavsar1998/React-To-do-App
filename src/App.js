@@ -50,7 +50,9 @@ class App extends Component {
   }
 
   deleteTodoList = () =>{
-    this.setState({todos: []});
+    if(window.confirm("Are you sure you want to reset your plan ?")){
+      this.setState({todos: []});
+    }
   }
   addTodo = (title) => {
     // console.log(title);
