@@ -50,8 +50,14 @@ class App extends Component {
   }
 
   deleteTodoList = () =>{
-    if(window.confirm("Are you sure you want to reset your plan ?")){
-      this.setState({todos: []});
+    if(this.state.todos.length===0){
+      alert("No Plan revised !!");
+    }
+    else{
+      if(window.confirm("Are you sure you want to reset your plan ?")){
+        this.setState({todos: []});
+      }
+
     }
   }
   addTodo = (title) => {
